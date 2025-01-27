@@ -1,0 +1,106 @@
+/* Layout.css */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    background: #E0F4FF;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    /* Sabit genişlik */
+    min-width: 250px;
+    max-width: 250px;
+    background: white;
+    border-right: 1px solid rgba(52, 152, 219, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(44, 62, 80, 0.1);
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+/* Navigation Buttons */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-inactive {
+    background: none;
+    color: #2C3E50;
+}
+
+.nav-inactive:hover {
+    background: #E0F4FF;
+}
+
+.nav-active {
+    background: linear-gradient(135deg, #2C3E50, #3498DB);
+    color: white;
+    box-shadow: 0 4px 6px rgba(44, 62, 80, 0.3);
+}
+
+.nav-active:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #3498DB, #48DBAE);
+}
+
+/* Logout Button */
+.logout-button {
+    margin-top: auto;
+    color: #E74C3C;
+    background: none;
+}
+
+.logout-button:hover {
+    background: #FFE5E5;
+    color: #C0392B;
+}
+
+/* Icons */
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    color: currentColor;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.content-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(44, 62, 80, 0.1);
+}

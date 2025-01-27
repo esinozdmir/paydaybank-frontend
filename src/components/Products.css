@@ -1,0 +1,187 @@
+/* Genel Stil ve Arka Plan */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  background: linear-gradient(135deg, #2C3E50, #3498DB, #48DBAE, #E0F4FF); /* Daha güzel bir arka plan rengi */
+  min-height: 100vh;
+  max-width: 1200px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-header {
+  width: 100%;
+  max-width: 1800px; /* Menü daha da genişletildi */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 24px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(44, 62, 80, 0.15);
+  margin-bottom: 32px;
+}
+
+.header-left h1 {
+  font-size: 2rem;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+.shop-icon {
+  color: #3498DB;
+  width: 32px;
+  height: 32px;
+}
+
+.header-right p {
+  color: #34495E;
+  font-size: 1.2rem;
+}
+
+/* Ürünler Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ürün kartları genişletildi */
+  gap: 24px;
+  padding: 8px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 8px 20px rgba(44, 62, 80, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%; /* Kart yükseklikleri eşitlendi */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px rgba(44, 62, 80, 0.2);
+}
+
+.product-image-container {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(224, 244, 255, 0.5);
+  margin-bottom: 16px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #5c7080;
+  line-height: 1.5;
+  flex-grow: 1; /* Açıklamalar eşit yükseklikte olacak */
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.product-available {
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.product-available.in-stock {
+  color: white;
+  background: #48DBAE;
+}
+
+.product-available.out-of-stock {
+  color: white;
+  background: #E74C3C;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #2C3E50;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Yükleniyor Animasyonu */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(52, 152, 219, 0.3);
+  border-left-color: #3498DB;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-container p {
+  color: #2C3E50;
+  font-size: 1.2rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.delete-button {
+  background-color: #f44336; /* Kırmızı */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}

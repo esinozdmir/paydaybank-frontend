@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #2C3E50, #3498DB, #48DBAE, #E0F4FF);
+  padding: 20px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(44, 62, 80, 0.2);
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.login-card h2 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 3px 5px rgba(44, 62, 80, 0.2);
+}
+
+.login-card .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.login-card .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2C3E50;
+}
+
+.login-card .form-group input {
+  padding: 12px;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(224, 244, 255, 0.2);
+  color: #2C3E50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card .form-group input:focus {
+  border-color: #3498DB;
+  box-shadow: 0px 0px 10px rgba(52, 152, 219, 0.3);
+}
+
+.login-card .submit-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #2C3E50;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(44, 62, 80, 0.3);
+}
+
+.login-card .submit-button:hover {
+  background: #48DBAE;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(72, 219, 174, 0.4);
+}
